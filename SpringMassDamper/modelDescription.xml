@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fmiModelDescription
+    fmiVersion="2.0"
+    modelName="SpringMassDamper"
+    guid="{12345678-1234-1234-1234-123456789abc}"
+    description="Spring-mass-damper FMU"
+    generationTool="GitHub Copilot"
+    variableNamingConvention="flat"
+    numberOfContinuousStates="2"
+    numberOfEventIndicators="0">
+
+    <ModelVariables>
+        <ScalarVariable name="x" valueReference="0" variability="continuous" causality="output" dataType="Real">
+            <Real start="0.0" />
+        </ScalarVariable>
+        <ScalarVariable name="v" valueReference="1" variability="continuous" causality="output" dataType="Real">
+            <Real start="0.0" />
+        </ScalarVariable>
+        <ScalarVariable name="F_ext" valueReference="2" variability="continuous" causality="input" dataType="Real">
+            <Real start="1.0" />
+        </ScalarVariable>
+    </ModelVariables>
+
+    <ModelStructure>
+        <Outputs>
+            <Unknown index="1" />
+            <Unknown index="2" />
+        </Outputs>
+        <Inputs>
+            <Unknown index="3" />
+        </Inputs>
+    </ModelStructure>
+</fmiModelDescription>
