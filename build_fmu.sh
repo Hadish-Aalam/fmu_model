@@ -4,14 +4,14 @@
 set -e
 
 # Compile C code to shared library
-gcc -fPIC -shared -o spring_mass_damper.so spring_mass_damper.c fmu_smd.c
+gcc -fPIC -shared -o spring_mass_damper.so src/spring_mass_damper.c src/fmu_smd.c
 
 # Create FMU directory structure
 mkdir -p SpringMassDamper/resources
 
 # Move shared library and XML
 cp spring_mass_damper.so SpringMassDamper/
-cp modelDescription.xml SpringMassDamper/
+cp src/modelDescription.xml SpringMassDamper/
 
 # Zip to FMU
 zip -r SpringMassDamper.fmu SpringMassDamper
